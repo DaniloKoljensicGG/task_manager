@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "tasks",
 ]
 
 MIDDLEWARE = [
@@ -75,11 +76,13 @@ WSGI_APPLICATION = "taskmanager.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "task_manager",
+        "HOST": "localhost",
+        "USER": "root",
+        "PASSWORD": "Rikimaru99$Bruno10!",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
